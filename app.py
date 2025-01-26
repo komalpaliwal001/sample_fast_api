@@ -1,7 +1,5 @@
-from typing import Any
 from flask import Flask, request, jsonify
 import pickle
-from sklearn.tree import DecisionTreeClassifier
 import numpy
 from classifier import trainingModel
 
