@@ -3,13 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample API</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    <script>
-    </script>
+    <title>MLOps Course Landing Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional: Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        .hero {
+            background: #f8f9fa;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .features {
+            padding: 60px 0;
+        }
+        .instructor {
+            background: #f1f1f1;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .footer {
+            background: #343a40;
+            color: #fff;
+            padding: 30px 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Sample API</h1>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">MLOps Course</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#instructor">Instructor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#signup">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero d-flex align-items-center">
+        <div class="container">
+            <h1 class="display-4">Master MLOps</h1>
+            <p class="lead">Learn the best practices for deploying and managing machine learning models in production.</p>
+            <a href="#signup" class="btn btn-primary btn-lg">Enroll Now</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <i class="bi bi-speedometer2" style="font-size: 3rem; color: #0d6efd;"></i>
+                    <h3>Comprehensive Curriculum</h3>
+                    <p>Covering everything from model deployment to monitoring and scaling.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-people" style="font-size: 3rem; color: #0d6efd;"></i>
+                    <h3>Expert Instructors</h3>
+                    <p>Learn from industry professionals with extensive MLOps experience.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-laptop" style="font-size: 3rem; color: #0d6efd;"></i>
+                    <h3>Hands-On Projects</h3>
+                    <p>Apply your knowledge through real-world projects and case studies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructor Section -->
+    <section id="instructor" class="instructor">
+        <div class="container">
+            <h2 class="text-center mb-4">Meet Your Instructor</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <img src="https://via.placeholder.com/200" class="rounded-circle mb-3" alt="Instructor Photo">
+                    <h4>Jane Doe</h4>
+                    <p>With over a decade of experience in machine learning and DevOps, Jane has helped numerous organizations streamline their ML workflows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign Up Section -->
+    <section id="signup" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Get Started Today</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="course" class="form-label">Select Course</label>
+                            <select class="form-select" id="course">
+                                <option selected>Choose...</option>
+                                <option value="1">MLOps Fundamentals</option>
+                                <option value="2">Advanced MLOps</option>
+                                <option value="3">MLOps Project</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2025 MLOps Course. All rights reserved.</p>
+            <div>
+                <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="text-white"><i class="bi bi-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies (Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Optional: Include your own JavaScript here -->
 </body>
 </html>
-
