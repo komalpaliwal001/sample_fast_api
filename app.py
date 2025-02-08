@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, render_template, jsonify
 import pickle
 import numpy
 from classifier import trainingModel
@@ -6,9 +6,9 @@ from classifier import trainingModel
 #initialise the Flask app
 app = Flask(__name__)
 
-@app.route('/')
-def home():
-    return render_template('templates/index.html')
+@app.route("/", methods=["GET"])
+def index():
+    return render_template("index.html")
 
 @app.route("/get_status", methods=["GET"])
 def get_status():

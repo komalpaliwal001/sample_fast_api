@@ -1,4 +1,7 @@
+fastapi
 Flask
+keras
+matplotlib
 numpy
 pandas
 scikit_learn
