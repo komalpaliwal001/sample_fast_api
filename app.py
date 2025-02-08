@@ -1,10 +1,14 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import pickle
 import numpy
 from classifier import trainingModel
 
 #initialise the Flask app
 app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return render_template('index.html')
 
 @app.route("/get_status", methods=["GET"])
 def get_status():
@@ -31,4 +35,4 @@ def training():
     return jsonify({"Model":"Model file created"})
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5003)
+    app.run(debug=True, port=5000)
